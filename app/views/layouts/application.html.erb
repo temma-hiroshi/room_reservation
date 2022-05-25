@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RoomReservation</title>
+    <title>PoteShare</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-left-nav">
+        <p>title</p>
+        <p>area</p>
+        <p>keyword</p>
+      </div>
+      
+      <div class="header-right-nav">
+        <p>login</p>
+        <p>登録する</p>
+      </div>
+
+    </header>
+    
     <%= yield %>
+    
+    <footer>
+      <p>©︎ 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>
