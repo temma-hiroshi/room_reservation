@@ -12,14 +12,17 @@
   <body>
     <header>
       <div class="header-left-nav">
-        <p>title</p>
-        <p>area</p>
-        <p>keyword</p>
+        <a href="/">
+          <img src="/assets/logo.png" alt="サイトのロゴ画像">
+        </a>
+
+        <p>area </p>
+        <p>keyword </p>
       </div>
       
       <div class="header-right-nav">
-        <p>login</p>
-        <p>登録する</p>
+        <%= button_to "ログイン", "#", class: "btn-primary" %>
+        <%= button_to "登録する", "#" %>
       </div>
 
     </header>
