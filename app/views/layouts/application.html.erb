@@ -21,8 +21,8 @@
       </div>
       
       <div class="header-right-nav">
-        <%= button_to "ログイン", "#", class: "btn-primary" %>
-        <%= button_to "登録する", "#" %>
+        <%= button_to "ログイン", "/users/sign_in", {method: :get} %>
+        <%= button_to "登録する", "/users/sign_up", {method: :get} %>
       </div>
 
     </header>
