@@ -5,4 +5,8 @@ class UsersController < ApplicationController
   
   def update
   end
+  
+  # /users/profile
+  def profile
+  end
 end

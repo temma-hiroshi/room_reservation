@@ -25,16 +25,13 @@
           <div class ="name">
             <%= current_user.name %>
           </div>
-
-            <ul>
-              <!--<li><%= link_to "ルーム登録", "#" %></li>-->
-              <!--<li><%= link_to "予約済みルーム一覧", "#" %></li>-->
-              <!--<li><%= link_to "登録済みルーム一覧", "#" %></li>-->
-              <li><%= link_to "設定", "/users/account" %></li>
-              <li><%= link_to "ログアウト", "/users/sign_out", {method: :delete} %></li>
-            </ul>
-            
-          <%= button_to "ログアウト", "/users/sign_out", {method: :delete} %>
+          <div class="header-nav">
+            <%= button_to "ルーム登録", "#" %>
+            <%= button_to "予約済みルーム一覧", "#" %>
+            <%= button_to "登録済みルーム一覧", "#" %>
+            <%= button_to "設定", "/users/account", {method: :get} %>
+            <%= button_to "ログアウト", "/users/sign_out", {method: :delete} %>
+          </div>
         <% else %>
           <%= button_to "ログイン", "/users/sign_in", {method: :get} %>
           <%= button_to "登録する", "/users/sign_up", {method: :get} %>

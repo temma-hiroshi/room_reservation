@@ -1,3 +1,29 @@
-<h1>show</h1>
-
-<%= button_to "編集", "/users/edit", {method: :get} %>
+<div class="wrapper">
+  <div class="row">
+    <ul>
+      <li><%= link_to "アカウント",    "/users/account" %></li>
+      <li><%= link_to "プロフィール",  "/users/profile" %></li>
+    </ul>
+  </div>
+  <div class="user-view">
+    <div class="user-view-box">
+      <div class="update-content">
+        <h5>アカウント</h5>
+      </div>
+      
+      <div class="update-content">
+        <label for="email">メールアドレス</label>
+        <%= current_user.email %></br>
+      </div>
+      
+      <div class="update-content">
+        <label for="password">パスワード</label>
+        <%= "********" %>
+      </div>
+      
+      <div class="edit-button">
+        <%= button_to "編集", "/users/edit", {method: :get} %>
+      </div>
+    </div>
+  </div>
+</div>

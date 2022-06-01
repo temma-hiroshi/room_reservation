@@ -42,6 +42,12 @@ header{
   }
 }
 
+.header-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .notice{
   background-color: lightblue;
   color: #fff;
