@@ -48,6 +48,19 @@ header{
   text-align: center;
   font-size: 13px;
 }
+.alert{
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+}
+
+#error_explanation{
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
 
 footer{
   color: #fff;

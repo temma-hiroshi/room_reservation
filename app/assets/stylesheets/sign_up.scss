@@ -5,7 +5,7 @@
   margin-bottom: 10px;
 }
 
-.field::before{
+.required::before{
   content: '必須';
   color: #fff;
   background-color: #ff0000a8;
