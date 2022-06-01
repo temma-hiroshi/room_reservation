@@ -37,9 +37,16 @@ header{
   justify-content: space-between;
   
   // ボタン要素にbootstrapでスタイルあてた後で修正
-  input{
+  input,.name{
     margin:20px 10px;
   }
+}
+
+.notice{
+  background-color: lightblue;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
 }
 
 footer{

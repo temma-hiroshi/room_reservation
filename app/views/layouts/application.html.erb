@@ -21,12 +21,22 @@
       </div>
       
       <div class="header-right-nav">
-        <%= button_to "ログイン", "/users/sign_in", {method: :get} %>
-        <%= button_to "登録する", "/users/sign_up", {method: :get} %>
+        <% if user_signed_in? %>
+          <div class ="name">
+            <%= current_user.name %>
+          </div>
+          <%= button_to "ログアウト", "/users/sign_out", {method: :delete} %>
+        <% else %>
+          <%= button_to "ログイン", "/users/sign_in", {method: :get} %>
+          <%= button_to "登録する", "/users/sign_up", {method: :get} %>
+        <% end %>
       </div>
-
+      
     </header>
     
+    <% flash.each do |message_type, message| %>
+      <%= content_tag :div, message, class: message_type %>
+    <% end %>
     <%= yield %>
     
     <footer>
