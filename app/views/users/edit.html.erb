@@ -12,16 +12,16 @@
       </div>
       
       <!--resourcesのような標準的なルーティングでない場合、urlの指定が必要-->
-      <%= form_with model: @user, url: users_profile_url do |f| %>
-        <%= f.label :image, "アイコン画像" %>
-        <%= f.text_field :image %><br>
+      <%= form_with model: @user, local: true, url: users_profile_url do |f| %>
+        <%= f.label :image, "アイコン画像", class: "required" %>
+        <%= f.text_field :image,  class: "user-input-data" %><br>
 
-        <%= f.label :name, "名前" %>
-        <%= f.text_field :name %><br>
+        <%= f.label :name, "名前", class: "required" %>
+        <%= f.text_field :name, class: "user-input-data" %><br>
 
-        
-        <%= f.label :introduction, "自己紹介" %>
-        <%= f.text_area :introduction %><br>
+        <%= f.label :introduction, "自己紹介", class: "required" %>
+        <%= f.text_area :introduction, class: "user-input-data" %><br>
+      
         <%= f.submit "更新" %>
       
       <% end %>
