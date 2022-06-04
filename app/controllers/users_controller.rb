@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   def update
   end
   
-  # /users/profile
-  def profile
+  # /users/profile,GET
+  def edit
+    @user = User.find(current_user.id)
+  end
+  
+  # /users/profile,PATCH
+  def update
   end
 end

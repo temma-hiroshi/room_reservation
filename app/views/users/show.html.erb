@@ -13,12 +13,16 @@
       
       <div class="update-content">
         <label for="email">メールアドレス</label>
-        <%= current_user.email %></br>
+        <div class="user-data">
+          <%= current_user.email %></br>
+        </div>
       </div>
       
       <div class="update-content">
         <label for="password">パスワード</label>
-        <%= "********" %>
+        <div class="user-data">
+          <%= "********" %>
+        </div>
       </div>
       
       <div class="edit-button">

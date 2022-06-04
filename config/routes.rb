@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "home#index"
   get 'home/index'
   
-  get 'users/account', to: 'users#show'
+  get   'users/account', to: 'users#show'
+  get   'users/profile', to: 'users#edit'
+  patch 'users/profile', to: 'users#update'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

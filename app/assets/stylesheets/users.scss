@@ -9,6 +9,9 @@
   height:100vh;
   padding:30px 15px;
   flex:1;
+  li{
+    list-style:none;
+  }
 }
 .user-view{
   flex:6;
@@ -27,6 +30,13 @@
   margin: 0 15px;
   font-size: 16px;
   height:50px;
+  display:flex;
+  label{
+    flex:1;
+  }
+  .user-data{
+    flex:4;
+  }
 }
 
 .edit-button{

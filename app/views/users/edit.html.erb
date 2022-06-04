@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="row">
+    <ul>
+      <li><%= link_to "アカウント",    "/users/account" %></li>
+      <li><%= link_to "プロフィール",  "/users/profile" %></li>
+    </ul>
+  </div>
+  <div class="user-view">
+    <div class="user-view-box">
+      <div class="update-content">
+        <h5>プロフィール</h5>
+      </div>
+      
+      <!--resourcesのような標準的なルーティングでない場合、urlの指定が必要-->
+      <%= form_with model: @user, url: users_profile_url do |f| %>
+        <%= f.label :image, "アイコン画像" %>
+        <%= f.text_field :image %><br>
+
+        <%= f.label :name, "名前" %>
+        <%= f.text_field :name %><br>
+
+        
+        <%= f.label :introduction, "自己紹介" %>
+        <%= f.text_area :introduction %><br>
+        <%= f.submit "更新" %>
+      
+      <% end %>
+ 
+
+    </div>
+  </div>
+</div>
