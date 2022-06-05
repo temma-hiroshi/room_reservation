@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+  
+  # edit,showアクションはログイン中のみアクセス可能
+  before_action :authenticate_user!, only: [:show, :edit]
+  
   # /users/account
   def show
-  end
-  
-  def update
   end
   
   # /users/profile,GET
