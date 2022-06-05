@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "ユーザー情報を更新しました"
       redirect_to :users_profile
     else
-      flash.now[:notice] = "更新できませんでした"
+      flash.now[:alert] = "更新できませんでした"
       render "edit"
     end
   end
