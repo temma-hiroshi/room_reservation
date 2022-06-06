@@ -25,6 +25,7 @@
           <div class ="name">
             <%= current_user.name %>
           </div>
+            <%= image_tag current_user.image.url, class: "icon-image" if current_user.image? %>
           <div class="header-nav">
             <%= button_to "ルーム登録", "#" %>
             <%= button_to "予約済みルーム一覧", "#" %>

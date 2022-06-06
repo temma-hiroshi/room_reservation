@@ -13,8 +13,12 @@
       
       <!--resourcesのような標準的なルーティングでない場合、urlの指定が必要-->
       <%= form_with model: @user, local: true, url: users_profile_url do |f| %>
+      <div class="form-group">
+        <%= image_tag current_user.image.url, class: "icon-image" if current_user.image? %><br>
         <%= f.label :image, "アイコン画像", class: "required" %>
-        <%= f.text_field :image,  class: "user-input-data" %><br>
+        <%= f.file_field :image,  class: "user-input-data" %><br>
+      </div>
+        
 
         <%= f.label :name, "名前", class: "required" %>
         <%= f.text_field :name, class: "user-input-data" %><br>
