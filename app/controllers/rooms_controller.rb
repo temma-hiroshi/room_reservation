@@ -6,6 +6,7 @@ class RoomsController < ApplicationController
   
   # 部屋詳細、及び予約画面
   def show
+    @room = Room.find(params[:id])
   end
   
   # 部屋登録

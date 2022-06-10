@@ -17,3 +17,38 @@
     max-width: 400px;
   }
 }
+
+.room-index-container{
+  max-width: 100vw;
+  padding: 30px 60px;
+  h4{
+    margin: 10px 0;
+  }
+  thead{
+    th{
+      padding: 8px 15px;
+    }
+    tr{
+      text-align: center;
+    }
+  }
+  tbody{
+    td{
+      padding: 10px;
+      text-align: center;
+      img{
+        width: 240px;
+        height: 140px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.room-price-index::before{
+  content: "¥";
+}
+
+.room-show-image{
+  max-width: 750px;
+}
