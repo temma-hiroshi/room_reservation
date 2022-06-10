@@ -1,3 +1,19 @@
 // Place all the styles related to the Rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.form-content{
+  border-bottom: 1px solid #eaedef;
+  margin: 0 15px 10px 15px;
+  font-size: 16px;
+  height:50px;
+  display:flex;
+  label{
+    flex:1;
+    max-width: 200px;
+  }
+  .data-field{
+    flex:5;
+    max-width: 400px;
+  }
+}
