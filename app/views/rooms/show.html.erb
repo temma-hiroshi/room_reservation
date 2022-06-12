@@ -6,8 +6,8 @@
       <%= render "shared/icon_image" %>
       
       <div class="room-show-profile">
-        <%= current_user.name %><br>
-        <%= current_user.introduction %>
+        <%= @user.name %><br>
+        <%= @user.introduction %>
       </div>
     </div>
     <p class="room-show-detail-content"><%= @room.introduction %></p>
