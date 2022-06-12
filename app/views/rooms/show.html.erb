@@ -3,7 +3,7 @@
     <%= image_tag @room.image.url, class: "room-show-image" %><br>
     
     <div class="room-show-detail">
-      <%= image_tag current_user.image.url, class: "icon-image room-show-icon-image" %>
+      <%= render "shared/icon_image" %>
       
       <div class="room-show-profile">
         <%= current_user.name %><br>
