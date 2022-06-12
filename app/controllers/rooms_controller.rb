@@ -20,7 +20,7 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     if @room.save
       flash[:notice] = "部屋情報を登録しました"
-      redirect_to "/rooms/show"
+      redirect_to "/rooms/#{@room.id}"
     else
       flash.now[:alert] = "登録できませんでした"
       render "new"

@@ -52,3 +52,24 @@
 .room-show-image{
   max-width: 750px;
 }
+
+.room-container-show{
+  padding: 30px 60px;
+  display: flex;
+}
+
+.room-show-detail{
+  display:flex;
+}
+.room-show-icon-image{
+  padding: 10px;
+}
+
+.room-show-profile{
+  padding: 10px;
+}
+.room-show-detail-content{
+  padding: 30px 10px;
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
