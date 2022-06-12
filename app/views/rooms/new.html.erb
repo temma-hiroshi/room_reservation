@@ -35,9 +35,9 @@
           <%= f.label :image, "ルーム画像", class: "required" %>
           <%= f.file_field :image, class: "data-field" %><br>
         </div>
-        
-        <%= f.hidden_field :user_id, value: @user.id %>
-        
+
+         <%= f.hidden_field :user_id, value: current_user.id %>
+
         <%= f.submit "登録" %>
       <% end %>
     </div>
