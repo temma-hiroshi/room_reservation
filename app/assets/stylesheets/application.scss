@@ -26,9 +26,9 @@ header{
   display:flex;
   justify-content: space-between;
   padding: 6px 12px 6px 30px;
-  // 後でp要素は削除
-  p{
-    margin: 5px;
+  input{
+    margin:15px;
+    height:30px;
   }
 }
 

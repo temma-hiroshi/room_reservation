@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get   'users/profile', to: 'users#edit'
   patch 'users/profile', to: 'users#update'
   
-  resources :rooms, :only => [:index, :show, :new, :create]
+  resources :rooms, :only => [:index, :show, :new, :create] do
+    collection do
+      get 'search'
+    end
+  end
 
 
 
