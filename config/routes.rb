@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   get   'users/profile', to: 'users#edit'
   patch 'users/profile', to: 'users#update'
   
-  # get 'reservations/confirm', to: 'reservations#confirm'
-  # post 'reservations/confirm', to: 'reservations#confirm'
-
   resources :reservations, :only => [:index, :show, :create] do
     collection do
       post :confirm
@@ -22,7 +19,4 @@ Rails.application.routes.draw do
     end
   end
 
-
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

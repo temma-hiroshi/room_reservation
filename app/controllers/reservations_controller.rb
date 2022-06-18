@@ -17,13 +17,8 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @room = @reservation.room
-    if @reservation.save
-      redirect_to "/reservations/#{@reservation.id}"
-    else
-      flash[:notice] = "予約に失敗しました"
-      redirect_to "/users/account"
-    end
-  
+    @reservation.save
+    redirect_to "/reservations/#{@reservation.id}"
   end
   
   # 予約確認、rooms#showの後のリンク先

@@ -15,14 +15,11 @@
     <tbody>
       <% @rooms.each do |room| %>
         <tr>
-          <!--バリデーション追加後、if文削除-->
-          <td><%= link_to (image_tag room.image.url), "/rooms/#{room.id}" if room.image? %></td>
-          <td>
-            <%= link_to room.name, "/rooms/#{room.id}" %></td>
+          <td><%= link_to (image_tag room.image.url), "/rooms/#{room.id}" %></td>
+          <td><%= link_to room.name, "/rooms/#{room.id}" %></td>
           <td><%= room.introduction %></td>
           <td><%= "¥" + room.price.to_s %></td>
           <td><%= room.updated_at %></td>
-  
         </tr>
       <% end %>
     </tbody>

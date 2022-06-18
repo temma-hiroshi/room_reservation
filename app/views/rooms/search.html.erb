@@ -5,7 +5,7 @@
 <div class="search-container">
   <% @results.each do |result| %>
     <div class="search-row">
-      <%= link_to (image_tag result.image.url), "/rooms/#{result.id}" if result.image? %><br>
+      <%= link_to (image_tag result.image.url), "/rooms/#{result.id}" %><br>
         
       <div class="room-profile">
         <p class="room-profile-name">   <%= result.name %></p>
