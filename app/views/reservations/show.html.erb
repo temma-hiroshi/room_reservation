@@ -1,0 +1,21 @@
+<div class="reservation-show-container">
+  <div class="reservation-show-content">
+    <label>予約した部屋</label>
+    <span><%= @room.name %></span>
+  </div>
+    
+  <div class="reservation-show-content">
+    <label>開始日</label>
+    <span><%= @reservation.start_day %></span>
+  </div>
+    
+  <div class="reservation-show-content">
+    <label>終了日</label>
+    <span><%= @reservation.end_day %></span>
+  </div>
+    
+  <div class="reservation-show-content">
+    <label>価格</label>
+    <span><%= @total_price.to_s + "円" %></span>
+  </div>
+</div>

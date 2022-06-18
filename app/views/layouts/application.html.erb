@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RoomReservation</title>
+    <title>PoteShare</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,51 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-left-nav">
+        <a href="/">
+          <img src="/assets/logo.png" alt="サイトのロゴ画像">
+        </a>
+        
+        <%= search_form_for @q, url: "/rooms/search" do |f| %>
+          <%= f.search_field :address_cont, placeholder: "エリア" %>
+        <% end %>
+        
+        <%= search_form_for @q, url: "/rooms/search" do |f| %>
+          <%= f.search_field :name_or_introduction_or_address_cont, placeholder: "キーワード" %>
+        <% end %>
+      </div>
+      
+      <div class="header-right-nav">
+        <% if user_signed_in? %>
+          <div class ="name">
+            <%= current_user.name %>
+          </div>
+          
+          <%= render "shared/icon_image" %>
+
+          <div class="header-nav">
+            <%= button_to "ルーム登録", new_room_path, {method: :get} %>
+            <%= button_to "予約済みルーム一覧", "/reservations", {method: :get} %>
+            <%= button_to "登録済みルーム一覧", "/rooms", {method: :get} %>
+            <%= button_to "設定", "/users/account", {method: :get} %>
+            <%= button_to "ログアウト", "/users/sign_out", {method: :delete} %>
+          </div>
+        <% else %>
+          <%= button_to "ログイン", "/users/sign_in", {method: :get} %>
+          <%= button_to "登録する", "/users/sign_up", {method: :get} %>
+        <% end %>
+      </div>
+      
+    </header>
+    
+    <% flash.each do |message_type, message| %>
+      <%= content_tag :div, message, class: message_type %>
+    <% end %>
     <%= yield %>
+    
+    <footer>
+      <p>©︎ 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

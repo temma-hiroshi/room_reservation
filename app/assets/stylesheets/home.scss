@@ -1,0 +1,59 @@
+.top-main{
+  background-image: url(/assets/img_cover_top.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  position: relative;
+  .form-frame{
+    background-color: #fff;
+    max-width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    padding: 10px 20px;
+    h1{
+      text-align:center;
+      font-weight: normal;
+    }
+    label{
+      font-size: 0.8rem;
+    }
+    input{
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.recommendation-area{
+  h1{
+    margin: 30px 45px;
+  }
+  ul{
+    display:flex;
+    li{
+      justify-content: space-between;
+      list-style: none;
+      padding: 0px 15px;
+      width: 20%;
+      position: relative;
+      img{
+        width:100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      span{
+      position:absolute;
+      bottom:30px;
+      left:0;
+      right:0;
+      color: #fff;
+      margin: auto;
+      font-weight: bold;
+      text-align:center;
+      font-size:24px;
+       }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="row">
+    <ul>
+      <li><%= link_to "基本情報","/rooms/new" %></li>
+    </ul>
+  </div>
+  <div class="user-view">
+    <div class="user-view-box">
+      <div class="update-content">
+        <h5>ルーム情報登録</h5>
+      </div>
+      
+      <%= form_with model: @room, local: true do |f| %>
+        <div class="form-content">
+          <%= f.label :name, "ルーム名", class: "required" %>
+          <%= f.text_field :name, class: "data-field", placeholder: "ルーム名を入力" %><br>
+        </div>
+        
+        <div class="form-content">
+          <%= f.label :introduction, "ルーム紹介", class: "required" %>
+          <%= f.text_area :introduction, class: "data-field", placeholder: "ルーム説明を入力" %><br>
+        </div>
+        
+        <div class="form-content">
+          <%= f.label :price, "料金", class: "required" %>
+          <%= f.number_field :price, class: "data-field", placeholder: "1日あたりの料金を入力" %><br>
+        </div>
+          
+        <div class="form-content">
+          <%= f.label :address, "住所", class: "required" %>
+          <%= f.text_field :address, class: "data-field", placeholder: "住所を入力" %><br>
+        </div>
+
+        <div class="form-content">
+          <%= f.label :image, "ルーム画像", class: "required" %>
+          <%= f.file_field :image, class: "data-field" %><br>
+        </div>
+
+         <%= f.hidden_field :user_id, value: current_user.id %>
+
+        <%= f.submit "登録" %>
+      <% end %>
+    </div>
+  </div>
+</div>

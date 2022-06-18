@@ -1,0 +1,17 @@
+<h4 class="search-title">
+  <%= "検索結果:" + @results.count.to_s + "件" %>
+</h4>
+
+<div class="search-container">
+  <% @results.each do |result| %>
+    <div class="search-row">
+      <%= link_to (image_tag result.image.url), "/rooms/#{result.id}" %><br>
+        
+      <div class="room-profile">
+        <p class="room-profile-name">   <%= result.name %></p>
+        <p class="room-profile-address"><%= result.address %></p>
+        <p class="room-profile-price">  <%= "¥" + result.price.to_s %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

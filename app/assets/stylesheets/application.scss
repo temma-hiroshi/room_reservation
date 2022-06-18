@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  color: #fff;
+  height: 70px;
+}
+
+.header-left-nav{
+  display:flex;
+  justify-content: space-between;
+  padding: 6px 12px 6px 30px;
+  input{
+    margin:15px;
+    height:30px;
+  }
+}
+
+.header-right-nav{
+  display: flex;
+  justify-content: space-between;
+  
+  // ボタン要素にbootstrapでスタイルあてた後で修正
+  input,.name{
+    margin:20px 10px;
+  }
+}
+
+.header-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice{
+  background-color: lightblue;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+}
+.alert{
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+}
+
+#error_explanation{
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+.icon-image{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+
+footer{
+  color: #fff;
+  background-color: #111;
+  text-align:center;
+  font-size: 13px;
+  height: 90px;
+  padding-top: 60px;
+  margin-top: 64px;
+}
