@@ -36,7 +36,7 @@
 
           <div class="header-nav">
             <%= button_to "ルーム登録", new_room_path, {method: :get} %>
-            <%= button_to "予約済みルーム一覧", "#" %>
+            <%= button_to "予約済みルーム一覧", "/reservations", {method: :get} %>
             <%= button_to "登録済みルーム一覧", "/rooms", {method: :get} %>
             <%= button_to "設定", "/users/account", {method: :get} %>
             <%= button_to "ログアウト", "/users/sign_out", {method: :delete} %>

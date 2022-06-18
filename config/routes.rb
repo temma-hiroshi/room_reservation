@@ -7,6 +7,15 @@ Rails.application.routes.draw do
   get   'users/profile', to: 'users#edit'
   patch 'users/profile', to: 'users#update'
   
+  # get 'reservations/confirm', to: 'reservations#confirm'
+  # post 'reservations/confirm', to: 'reservations#confirm'
+
+  resources :reservations, :only => [:index, :show, :create] do
+    collection do
+      post :confirm
+    end
+  end
+  
   resources :rooms, :only => [:index, :show, :new, :create] do
     collection do
       get 'search'

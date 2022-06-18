@@ -1,0 +1,81 @@
+// reservation/index
+
+.reservation-index-container{
+  padding: 30px 60px;
+  table{
+    min-width: 800px;
+    thead{
+        th{
+          padding: 8px 15px;
+          }
+        }
+    tbody{
+      tr{
+        border-bottom: 1px solid #eaedef;
+        td{
+          text-align: center;
+          padding: 10px;
+        }
+        img{
+          width: 240px;
+          height: 140px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+
+// reservation/confirm
+
+.reservations-confirm-content{
+  max-width: 50%;  
+  padding: 20px;
+  border: 1px solid #eaedef;
+  margin: 20px auto;
+  label{
+    margin-bottom: 5px;
+  }
+  input{
+    margin-bottom: 5px;
+    background-color: #e9ecef;
+  }
+  h4{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 5px auto;
+  }
+  h5{
+    font-size: 1.2rem;
+    margin: 5px auto;
+  }
+  h6{
+    font-size: 1rem;
+    border-bottom: 1px solid #eaedef;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+// reservation/show
+
+.reservation-show-container{
+  max-width: 880px;
+  margin: 30px auto;
+  border: 1px solid #eaedef;
+}
+.reservation-show-content{
+  border-bottom: 1px solid #eaedef;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+  display:flex;
+  label{
+    font-weight: bold;
+    flex:1;
+  }
+  span{
+    flex:4;
+  }
+}
