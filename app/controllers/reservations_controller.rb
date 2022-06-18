@@ -28,12 +28,18 @@ class ReservationsController < ApplicationController
   
   # 予約確認、rooms#showの後のリンク先
   def confirm
+    
     @reservation = Reservation.new(reservation_params)
     @room        = @reservation.room
+    @user        = @room.user
     
-    @reservation.start_day && @reservation_end_day && @reservation.number_of_people
-    @day_used    = (@reservation.end_day - @reservation.start_day).to_i
-    @total_price = @room.price * @day_used * @reservation.number_of_people
+    # 開始日、終了日、人数の入力必須
+    if @reservation.invalid?
+      render "rooms/show"
+    else
+      @day_used    = (@reservation.end_day - @reservation.start_day).to_i
+      @total_price = @room.price * @day_used * @reservation.number_of_people
+    end
   end
   
   private
